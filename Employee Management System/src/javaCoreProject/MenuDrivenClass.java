@@ -74,11 +74,18 @@ public class MenuDrivenClass {
             }
             // for display employee details
             case 2: {
+                int flag = 0;
                 Iterator<EmployeeDetails> itr = obj1.iterator();
 
                 while (itr.hasNext()) {
                     EmployeeDetails emp = itr.next();
                     System.out.println(emp);
+                    flag = 1;
+                }
+                if(flag == 0)
+                {
+                    System.out.println("there is nothing to display");
+                	System.out.println("enter 1 to add employee details");
                 }
                 break;
             }
